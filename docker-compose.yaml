@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  n8n:
+    image: n8nio/n8n
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    volumes:
+      - ./n8n-data:/home/node/.n8n
+      - ./workflows:/home/node/workflows
+    environment:
+      - N8N_USER_FOLDER=/home/node/.n8n
+      - N8N_EXTERNAL_STORAGE_LOCAL_FOLDER=/home/node/workflows

@@ -1,0 +1,17 @@
+# n8n private data (credentials, database)
+n8n-data/
+*.sqlite
+*.db
+
+# Environment files
+.env
+*.env
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
